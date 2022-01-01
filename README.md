@@ -68,19 +68,18 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - The main advantage of using automatic configuration with Ansible is having complete control of the computing infrastructure that is being deployed and making single changes that will configure many environments. Provisioning and management control through the use of Infrastructure as Code (IAC) allows for the deployment and configuration of multiple environments from a single command.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-Create a VM that will be dedicated to the ELK Server
-Once the VM has been created, add the machine to Ansible’s ‘hosts’ file.(Seperate from “[webservers]”)
-Create a playbook for the ELK installation that includes configuration for modules and commands for: Docker.io, python3-pip, Docker, memory, ELK container, and systemd
-Once VM has been created and ELK playbook is created run command “ansible-playbook [NAME_OF_YOUR_PLAYBOOK]”
-Once the ELK has been deployed into the VM access to the ELK VM need to be restricted using Azure's network security groups (NSGs)
-Whitelisting the administrators IP address allows access over HTTPS
-- ...
+
+- Create a VM that will be dedicated to the ELK Server
+- Once the VM has been created, add the machine to Ansible’s ‘hosts’ file.(Seperate from “[webservers]”)
+- Create a playbook for the ELK installation that includes configuration for modules and commands for: Docker.io, python3-pip, Docker, memory, ELK container, and systemd
+- Once VM has been created and ELK playbook is created run command “ansible-playbook [NAME_OF_YOUR_PLAYBOOK]”
+- Once the ELK has been deployed into the VM access to the ELK VM need to be restricted using Azure's network security groups (NSGs)
+- Whitelisting the administrators IP address allows access over HTTPS
+
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
- 
-(Images/docker_ps_output.png)
+ (Images/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
