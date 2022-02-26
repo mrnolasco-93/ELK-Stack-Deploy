@@ -31,7 +31,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat takes metrics and statistics that are collected and forwards the information to an analytics engine such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     |       Function      | IP Address | Operating System|
 |----------|:-------------------:|:----------:|:---------------:|
@@ -103,11 +102,10 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to servers ‘/etc’ directory to check that the installation worked as expected. In ‘/etc’ there should be a metricbeat and filebeat directories. Lastly, using the IP address of the ELK server, on your local host access Kibana using ‘http://13.89.218.128:5601/app/kibana’. (http://YOUR.IP.ADDRESS:5601/app/kibana)
 - If all done correctly, Kibana will log/analyze file and metric data and output that information on this dash system.
 
-Answer the following questions to fill in the blanks:
+Anisble/YAML File FAQ
 - The playbook is the file that specifies the modules and configurations to use in deployment. It can be named what you would like. Typically ends with “.yml” as a YAML file. It will be copied and ran from your designated playbook directory within the Ansible directory (etc/ansible/roles)
 - The Ansible configuration file needs to be updated to specify which servers are “webservers” and which is the “ELK” server. Once that is properly designated within the Ansible config file, when creating the playbooks for filebeat and metricbeat a “hosts” must be designated at the top of the playbook. Here, either ELK or Webservers must be designated to determine where the playbook will be deployed.
 - (http://YOUR.IP.ADDRESS:5601/app/kibana)  
 
 	Example: ‘http://13.89.218.128:5601/app/kibana’
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
